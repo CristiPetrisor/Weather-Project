@@ -6,8 +6,10 @@ if (currentCityFromLs) {
   currentCityTag.innerHTML = currentCityFromLs;
 }
 
+// Daca nu avem cheia *city in localStorage atunci setam ca valoare default Bucuresti
 if (!currentCityFromLs) {
   localStorage.setItem("city", "Bucharest");
+  currentCityFromLs = "Bucharest";
 }
 // Afisam vremea curenta folosind o functie din alt fisier
 displayCurrentWeather(currentCityFromLs);
